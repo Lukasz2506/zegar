@@ -65,10 +65,10 @@ footer * {
         width: 80%;
         margin: 0 auto;
     }
-    form > input {
+    #clock {
         width: 75%;
-    footer {
-
     }
+    #date {
+        width: 90%;
     }
 }
