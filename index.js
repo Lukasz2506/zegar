@@ -37,6 +37,7 @@ setInterval(setTimeToDOM, 1000);
 
 //new date variables
 var time = new Date();
+var day = time.getDate()
 var month = time.getMonth();
 var year = time.getFullYear();
 var nameOfmonth = "";
@@ -86,7 +87,16 @@ switch (month) {
 
 //Put nameOfMonth and year into date html cell
 var currentdate = document.querySelector("#date");
-currentdate.value = `${nameOfmonth} ${year}`;
+if (day==1 || day==21) {
+  currentdate.value = `${day}st ${nameOfmonth} ${year}`;
+} else if (day==2 || day==21) {
+  currentdate.value = `${day}nd ${nameOfmonth} ${year}`;
+} else if (day==3 || day==23) {
+  currentdate.value = `${day}rd ${nameOfmonth} ${year}`;
+} else {
+  currentdate.value = `${day}th ${nameOfmonth} ${year}`;
+}
+
 
 
 //---------------------------CREATING BACKGROUND DEPENDING ON SEASON---------------------------
@@ -101,7 +111,7 @@ var summerList = ["summer-1", "summer-2", "summer-3", "summer-4"];
 var randomNumber = Math.floor((1+ Math.random() * 4));
 
 //Get into the body
-var body = document.querySelector("body");
+var body = document.querySelector(".background-image");
 
 //Creating a lop which assign a random background image depending on the season
 
