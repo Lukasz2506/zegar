@@ -89,7 +89,7 @@ switch (month) {
 var currentdate = document.querySelector("#date");
 if (day==1 || day==21) {
   currentdate.value = `${day}st ${nameOfmonth} ${year}`;
-} else if (day==2 || day==21) {
+} else if (day==2 || day==22) {
   currentdate.value = `${day}nd ${nameOfmonth} ${year}`;
 } else if (day==3 || day==23) {
   currentdate.value = `${day}rd ${nameOfmonth} ${year}`;
